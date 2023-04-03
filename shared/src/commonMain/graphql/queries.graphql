@@ -1,0 +1,15 @@
+query GetSessions {
+    sessions {
+        ...SessionDetails
+    }
+}
+
+
+fragment SessionDetails on Session {
+    id
+    title
+    start
+    speakers {
+        name
+    }
+}

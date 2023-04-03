@@ -1,5 +1,5 @@
 <templateSet group="aaConfetti">
-  <template name="xrCreateApolllo" value="// Create Apollo client with normalized cache&#10;private val apolloClient = ApolloClient.Builder()&#10;    .serverUrl(&quot;http://localhost:8080/graphql&quot;)&#10;    .normalizedCache(MemoryCacheFactory(10_000_000).chain(SqlNormalizedCacheFactory(getDatabaseName(conferenceName))))&#10;    .build()&#10;" description="" toReformat="false" toShortenFQNames="true">
+  <template name="xrCreateApolllo" value="// Create Apollo client with normalized cache (in memory and persistent)&#10;private val apolloClient = ApolloClient.Builder()&#10;    .serverUrl(&quot;http://localhost:8080/graphql&quot;)&#10;    //.serverUrl(&quot;https://kotlinconfetti.ew.r.appspot.com/graphql&quot;)&#10;    .normalizedCache(MemoryCacheFactory(10_000_000).chain(SqlNormalizedCacheFactory(getDatabaseName(conferenceName))))&#10;    .build()&#10;" description="" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="KOTLIN" value="true" />
     </context>
